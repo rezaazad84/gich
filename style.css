@@ -1,226 +1,359 @@
-@font-face {
-    font-family: IRANSansX;
-    font-style: normal;
-    font-weight: bold;
-    src: url('fonts/woff/IRANSansX-Bold.woff') format('woff'),
-    url('fonts/woff2/IRANSansX-Bold.woff2') format('woff2');
-}
+/*@font-face {*/
+/*    font-family: IRANSansX;*/
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    src: url('fonts/woff/IRANSansX-Bold.woff') format('woff'),*/
+/*    url('fonts/woff2/IRANSansX-Bold.woff2') format('woff2');*/
+/*}*/
 
-@font-face {
-    font-family: IRANSansX;
-    font-style: normal;
-    font-weight: normal;
-    src: url('fonts/woff/IRANSansX-Regular.woff') format('woff'),
-    url('fonts/woff2/IRANSansX-Regular.woff2') format('woff2');
-}
+/*@font-face {*/
+/*    font-family: IRANSansX;*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    src: url('fonts/woff/IRANSansX-Regular.woff') format('woff'),*/
+/*    url('fonts/woff2/IRANSansX-Regular.woff2') format('woff2');*/
+/*}*/
 
-* {
-    box-sizing: border-box;
-}
+/* Global Styles */
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap'); /* یک فونت فارسی زیبا */
 
-html {
-    scroll-behavior: smooth;
+:root {
+    --primary-color: #6D4C41; /* قهوه‌ای تیره (مثل قهوه) */
+    --secondary-color: #A1887F; /* قهوه‌ای روشن‌تر */
+    --accent-color: #FFAB40; /* نارنجی/طلایی برای تاکید */
+    --background-color: #F5F5F5; /* پس‌زمینه روشن و خنثی */
+    --text-color: #3E2723; /* رنگ متن تیره */
+    --card-background: #FFFFFF; /* پس‌زمینه کارت‌ها */
+    --border-radius: 12px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --light-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 body {
+    font-family: 'Vazirmatn', Arial, sans-serif; /* استفاده از وزیرمتن */
     margin: 0;
-    font-family: IRANSansX, serif;
-    background-color: #dddddd;
-    /*background-image: url("img/IMG_6214.jpeg");*/
-    /*background-position: top;*/
-    /*background-repeat: no-repeat;*/
-    /*background-attachment: fixed;*/
-    /*background-size: cover;*/
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    direction: rtl; /* اطمینان از راست‌چین بودن */
+    line-height: 1.6;
 }
 
-::-webkit-scrollbar {
-    display: none;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 a {
     text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
 }
 
-button, input[type="button"], input[type="submit"] {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    font-family: inherit;
-}
-
-input, textarea, select {
-    font-family: inherit;
+a:hover {
+    color: var(--primary-color);
 }
 
 img {
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
+/* Header Styles */
 .header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--card-background);
+    padding: 20px 30px;
     display: flex;
-    background-color: #1e201e;
-    width: 15rem;
-    margin-inline: auto;
-    margin-block: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 0.25rem;
-    align-items: center;
     justify-content: space-between;
-    border-radius: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.header-name {
-    margin-block: 0;
-    color: #ecdfcc;
-}
-
-.header-center {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    font-weight: lighter;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-logo {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 100%;
+    width: 70px; /* اندازه لوگو رو تنظیم کنید */
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
 }
 
-.header-menu {
-    width: 2rem;
+.header-name {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: 500;
+    color: var(--card-background);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+/* Main Content Area */
 .main {
-    margin-inline: 1rem;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
 }
 
+/* Main Menu Navigation Styles */
 .main-menu {
-    height: 4rem;
-    margin-inline: auto;
-    border-radius: 1rem;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem;
-    overflow-x: scroll;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--light-shadow);
 }
 
 .menu {
-    background-color: #dddddd;
     display: flex;
+    flex-direction: column; /* آیکون بالا، متن پایین */
     align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    height: 2.75rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    min-width: 120px; /* برای نمایش بهتر در کنار هم */
+    text-align: center;
 }
 
-.menu-name {
-    margin-block: 0;
-    color: #393838;
-    font-weight: bold;
-    text-wrap: nowrap;
+.menu:hover {
+    transform: translateY(-5px);
+    background-color: #f0eada; /* یک رنگ هاور ملایم */
 }
 
 .menu-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 48px; /* اندازه آیکون‌ها رو تنظیم کنید */
+    height: 48px;
+    margin-bottom: 8px;
+    filter: invert(30%) sepia(17%) saturate(1500%) hue-rotate(345deg) brightness(90%) contrast(85%); /* تغییر رنگ آیکون‌ها به تم قهوه‌ای */
 }
 
-.box-name {
-    color: #202020;
+.menu-name {
+    font-size: 0.95em;
+    color: var(--primary-color);
+    font-weight: 500;
     text-align: center;
-    margin-top: 4rem;
 }
 
+/* Section Title Styles */
+.box-name {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-color);
+    text-align: right;
+    scroll-margin-top: 130px; /* اصلاح شده برای پوشش بهتر هدر چسبان */
+}
+
+/* Menu Item Box Styles */
 .menu-box {
-    background-color: #dddddd;
-    height: 10rem;
-    border-radius: 0.5rem;
     display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    margin-block: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+    overflow: hidden; /* برای اینکه border-radius روی تصویر هم اعمال بشه */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-box:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .box-img {
-    width: 8rem;
-    height: 8rem;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    width: 150px; /* عرض ثابت برای تصویر */
+    height: 150px; /* ارتفاع ثابت برای تصویر */
+    object-fit: cover; /* تصویر رو بدون تغییر نسبت، کادر رو پر می‌کنه */
+    border-left: 5px solid var(--accent-color); /* یک جداکننده رنگی زیبا */
 }
 
 .left-box {
-    margin-inline: 1rem;
+    padding: 20px;
+    flex-grow: 1; /* اجازه می‌ده این بخش فضای باقی‌مانده رو پر کنه */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: center;
 }
 
 .product-name {
-    margin-block: 0;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--primary-color);
 }
 
-.top-icon {
-    width: 1.5rem;
-    position: fixed;
-    bottom: 1rem;
-    right: 0.5rem;
+.left-box span { /* قیمت */
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--secondary-color);
 }
 
-.instagram-icon {
-    width: 1.5rem;
-    position: fixed;
-    bottom: 1rem;
-    left: 2.5rem;
-}
-
-.location-icon {
-    width: 1.5rem;
-    position: fixed;
-    bottom: 1rem;
-    left: 0.5rem;
-}
-
+/* Footer Styles */
 .footer {
-    background-color: #bbbbbb;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin-top: 3rem;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--card-background);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 10px 0;
+    color: var(--card-background); /* اطمینان از رنگ متن */
+}
+
+.footer h2.footer-text {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.footer h3.footer-text {
+    font-size: 1.2em;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.footer h4.footer-text, .footer h5.footer-text {
+    font-size: 1em;
+    font-weight: 400;
 }
 
 .location-footer {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.location-footer.end {
+    margin-top: 5px;
 }
 
 .footer-icon {
-    width: 1.5rem;
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* آیکون‌ها رو سفید می‌کنه */
 }
 
-.footer-text {
-    margin-block: 0.5rem;
-    color: #000000;
-}
-
+/* Design by text */
 .design {
-    position: fixed;
-    bottom: -1rem;
-    left: 0;
-    opacity: 50%;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    background-color: #e0e0e0;
 }
 
-.end {
-    margin-bottom: 4rem;
+/* Floating Action Button Styles - اصلاح شده برای RTL */
+.fix {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* تغییر به راست برای صفحات RTL */
+    z-index: 1001;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fix:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.top-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    filter: brightness(0) invert(1); /* برای اینکه آیکون در پس‌زمینه رنگی بهتر دیده بشه */
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .header-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    .header-name {
+        font-size: 1.5em;
+    }
+
+    .main-menu {
+        flex-direction: column; /* منوی اصلی به صورت ستونی در موبایل */
+        align-items: stretch; /* آیتم‌ها تمام عرض رو بگیرن */
+    }
+    .menu {
+        flex-direction: row; /* آیکون و متن کنار هم در موبایل برای منوی اصلی */
+        justify-content: flex-start; /* شروع از راست (به خاطر rtl) */
+        padding: 10px 15px;
+    }
+    .menu-icon {
+        margin-bottom: 0;
+        margin-left: 10px; /* فاصله بین آیکون و متن در موبایل */
+    }
+
+    .menu-box {
+        flex-direction: column; /* کارت‌های آیتم‌های منو به صورت ستونی در موبایل */
+    }
+    .box-img {
+        width: 100%; /* تصویر تمام عرض کارت رو بگیره */
+        height: 200px; /* ارتفاع تصویر در موبایل */
+        border-left: none;
+        border-bottom: 5px solid var(--accent-color); /* جداکننده پایین تصویر */
+    }
+    .left-box {
+        text-align: center; /* متن در موبایل وسط‌چین بشه */
+        padding: 15px;
+    }
+    .product-name {
+        font-size: 1.2em;
+    }
+    .left-box span {
+        font-size: 1em;
+    }
+    .footer h5.footer-text { /* آدرس در فوتر */
+        font-size: 0.9em;
+        padding: 0 10px; /* برای جلوگیری از چسبیدن به لبه‌ها */
+    }
+    .fix { /* دکمه بازگشت به بالا - اصلاح شده برای RTL */
+        bottom: 15px;
+        right: 15px; /* تغییر به راست برای صفحات RTL */
+        padding: 8px;
+    }
+    .top-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-name {
+        font-size: 1.3em;
+    }
+    .box-name {
+        font-size: 1.6em;
+    }
+    .menu-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .menu-name {
+        font-size: 0.9em;
+    }
 }
