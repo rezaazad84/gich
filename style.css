@@ -1,0 +1,226 @@
+@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/woff/IRANSansX-Bold.woff') format('woff'),
+    url('fonts/woff2/IRANSansX-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/woff/IRANSansX-Regular.woff') format('woff'),
+    url('fonts/woff2/IRANSansX-Regular.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: IRANSansX, serif;
+    background-color: #dddddd;
+    /*background-image: url("img/IMG_6214.jpeg");*/
+    /*background-position: top;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button, input[type="button"], input[type="submit"] {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-family: inherit;
+}
+
+input, textarea, select {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+}
+
+.header {
+    display: flex;
+    background-color: #1e201e;
+    width: 15rem;
+    margin-inline: auto;
+    margin-block: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header-name {
+    margin-block: 0;
+    color: #ecdfcc;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.header-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+}
+
+.header-menu {
+    width: 2rem;
+}
+
+.main {
+    margin-inline: 1rem;
+}
+
+.main-menu {
+    height: 4rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    overflow-x: scroll;
+}
+
+.menu {
+    background-color: #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    height: 2.75rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.menu-name {
+    margin-block: 0;
+    color: #393838;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.menu-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.box-name {
+    color: #202020;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.menu-box {
+    background-color: #dddddd;
+    height: 10rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-block: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.box-img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.left-box {
+    margin-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-name {
+    margin-block: 0;
+}
+
+.top-icon {
+    width: 1.5rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 0.5rem;
+}
+
+.instagram-icon {
+    width: 1.5rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 2.5rem;
+}
+
+.location-icon {
+    width: 1.5rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 0.5rem;
+}
+
+.footer {
+    background-color: #bbbbbb;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.location-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-icon {
+    width: 1.5rem;
+}
+
+.footer-text {
+    margin-block: 0.5rem;
+    color: #000000;
+}
+
+.design {
+    position: fixed;
+    bottom: -1rem;
+    left: 0;
+    opacity: 50%;
+}
+
+.end {
+    margin-bottom: 4rem;
+}
